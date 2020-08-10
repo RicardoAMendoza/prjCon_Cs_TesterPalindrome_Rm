@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace prjCon_Cs_TesterPalindrome
 {
-   /*
-    * This project uses the following licenses:
-    *  MIT License
-    *  Copyright (c) 2019 Ricardo Mendoza 
-    *  Montréal Québec Canada
-    *  Institut Teccart
-    *  www.teccart.qc.ca
-    *  Hiver 2019
-    */
+    /*
+     * This project uses the following licenses:
+     *  MIT License
+     *  Copyright (c) 2019 Ricardo Mendoza 
+     *  Montréal Québec Canada
+     *  Institut Teccart
+     *  www.teccart.qc.ca
+     *  Hiver 2019
+     *  été 2020
+     */
     class Program
     {
         static void Main(string[] args)
@@ -24,15 +25,20 @@ namespace prjCon_Cs_TesterPalindrome
             string chaine = "rotatoro";
             Console.WriteLine("\nTESTER SI C'EST PALINDROME", Console.ForegroundColor=ConsoleColor.Green);
             chaine = "anona";
-            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine));
+            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor=ConsoleColor.Yellow);
+            
             chaine = "ressasser";
-            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine));
+            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor=ConsoleColor.Yellow);
             chaine = "retâter";
-            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine));
+            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor=ConsoleColor.Yellow);
             chaine = "rotator";
-            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine));
+            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor=ConsoleColor.Yellow);
             chaine = "rotato";
-            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine));
+            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor=ConsoleColor.Yellow);
+            chaine = "nenorra";
+            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor = ConsoleColor.Yellow);
+            chaine = "ramiro";
+            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor = ConsoleColor.Yellow);
             Console.ReadKey();
         }
 
