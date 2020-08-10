@@ -26,7 +26,6 @@ namespace prjCon_Cs_TesterPalindrome
             Console.WriteLine("\nTESTER SI C'EST PALINDROME", Console.ForegroundColor=ConsoleColor.Green);
             chaine = "anona";
             Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor=ConsoleColor.Yellow);
-            
             chaine = "ressasser";
             Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor=ConsoleColor.Yellow);
             chaine = "retâter";
@@ -64,7 +63,10 @@ namespace prjCon_Cs_TesterPalindrome
             // Console.WriteLine("\nEnd Index : " + Convert.ToString(endindex));
             while (startindex < endindex)
             {
-                // Substring(Int32, Int32) -> Retrieves a substring from this instance. 
+                /* Substring(Int32, Int32) -> Retrieves a substring from this instance. */
+                /* To extract a substring that begins at a specified character position and ends before the end of the string, */
+                /* call the Substring(Int32, Int32) method.This method does not modify the value of the current instance.*/
+                /* Instead, it returns a new string that begins at the startIndex position in the current string. */
                 // The substring starts at specified character position and has a specified length.
                 if (value.Substring(startindex, 1) != value.Substring(endindex, 1))
                 {
