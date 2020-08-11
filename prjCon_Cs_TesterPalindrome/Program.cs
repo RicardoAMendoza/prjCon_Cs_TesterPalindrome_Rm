@@ -22,6 +22,7 @@ namespace prjCon_Cs_TesterPalindrome
         {
             // --------- Palindrome ----------
             // variable
+            int x = 5;
             string chaine = "rotatoro";
             Console.WriteLine("\nTESTER SI C'EST PALINDROME", Console.ForegroundColor=ConsoleColor.Green);
             chaine = "anona";
@@ -37,9 +38,51 @@ namespace prjCon_Cs_TesterPalindrome
             chaine = "nenorra";
             Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor = ConsoleColor.Yellow);
             chaine = "ramiro";
-            Console.WriteLine("\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor = ConsoleColor.Yellow);
+            Console.WriteLine("\n\nMot = {0} | Palindrome = {1}", chaine, fncEstPalindrome(chaine), Console.ForegroundColor = ConsoleColor.Yellow);
+ 
+            Console.WriteLine("\n\n\nLambda expression : " + getSquare(x), Console.ForegroundColor = ConsoleColor.Blue);
             Console.ReadKey();
+            Console.WriteLine("\n\n LOOP  PROGRAM TESTER PALINDROME ");
+            try
+            {
+                string palindrome;
+                char end;
+                //Console.WriteLine("\n WRITE AND TRY PALINDROME -> \n " , Console.ForegroundColor=ConsoleColor.Green);
+                //palindrome = Convert.ToString(Console.ReadLine().ToUpper());
+                //Console.WriteLine("\n\n palindrome -> " + palindrome);
+                do
+                {
+                    Console.WriteLine("\n WRITE AND TRY PALINDROME -> \n ", Console.ForegroundColor = ConsoleColor.Green);
+                    palindrome = Convert.ToString(Console.ReadLine().ToUpper());
+                    Console.WriteLine("\n\n palindrome -> " + palindrome);
+                    Console.WriteLine("\nMot = {0} | Palindrome = {1}", palindrome, fncEstPalindrome(palindrome), Console.ForegroundColor = ConsoleColor.Magenta);
+                    Console.WriteLine("\n\n Lambada Expresion => " + getSquare(x), Console.ForegroundColor = ConsoleColor.Blue);
+
+                    Console.WriteLine("\n Continue [Y/N]");
+                    end = char.Parse(Console.ReadLine().ToUpper());
+                }
+                while (end == 'Y');
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("erroir in program : " + e.Message);
+            }
+            finally
+            {
+                /* A common usage of catch and finally together is to obtain and use resources in a try block */
+                /* deal with exceptional circumstances in a catch block, and release the resources in the finally block. */
+
+                // To run the program in Visual Studio, type CTRL+F5. Then
+                // click Cancel in the error dialog.
+                Console.WriteLine("\n\n LAMBADA EXPRESION => " + getSquare(x), Console.ForegroundColor = ConsoleColor.Blue);
+                Console.WriteLine("\n\n Lambada expresion Function into finally block " , Console.ForegroundColor = ConsoleColor.Gray);
+                
+            }
+            Console.ReadLine();
         }
+
+        /* Try Lambada Expresion*/
+        private static int getSquare(int x) => x * x;
 
         // Palindrome
         // staic -> methods are methods that are called on the class itself, not on specific object instance
